@@ -14,6 +14,7 @@ defmodule SatelliteWeb.API.LogController do
       {:ok, _request} ->
         conn
         |> put_status(:created)
+        |> put_view(SatelliteWeb.API.DefaultView)
         |> render("created.json")
     end
   end
