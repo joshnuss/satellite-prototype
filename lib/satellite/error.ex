@@ -19,4 +19,10 @@ defmodule Satellite.Error do
 
     timestamps(inserted_at: :timestamp)
   end
+
+  def changeset(params) do
+    %__MODULE__{stacktrace: []}
+    |> cast(params, [:request_id, :type, :message, :host, :app, :environment, :client, :language, :ip, :commit, :stacktrace ])
+    |> validate_required([:request_id, :type, :host, :app, :environment, :client, :language, :ip])
+  end
 end
