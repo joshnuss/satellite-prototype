@@ -2,7 +2,7 @@ defmodule Satellite.Log do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @log_types ~w(info warning error debug)
+  @log_types ~w(emergency alert critical error warning notice info debug)
 
   @primary_key false
   @timestamps_opts updated_at: false
