@@ -3,6 +3,7 @@ defmodule Satellite.Types.JSON do
 
   def type, do: :string
 
+  def cast(array) when is_list(array), do: {:ok, array}
   def cast(map) when is_map(map), do: {:ok, map}
   def cast(string) when is_binary(string), do: {:ok, string}
   def cast(_), do: :error
