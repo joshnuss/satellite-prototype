@@ -23,6 +23,7 @@ defmodule SatelliteWeb.Router do
     pipe_through :api
 
     post "/requests", RequestController, :create
+    post "/logs", LogController, :create
   end
 
   # Enables LiveDashboard only for development
