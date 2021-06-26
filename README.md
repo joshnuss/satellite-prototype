@@ -1,19 +1,13 @@
 # Satellite
 
-To start your Phoenix server:
+All-in-one application monitoring.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+## License
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+BSL: Business Source License
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+You may run this on your own servers for commercial purposes, but with some restrictions.
 
-## Learn more
+You may **not** re-sell this. As is or modified.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Commits that are older than 2 years switch to MIT license.
