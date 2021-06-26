@@ -19,10 +19,11 @@ defmodule SatelliteWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", SatelliteWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", SatelliteWeb.API do
+    pipe_through :api
+
+    post "/requests", RequestController, :create
+  end
 
   # Enables LiveDashboard only for development
   #
