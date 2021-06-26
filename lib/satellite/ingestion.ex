@@ -1,5 +1,5 @@
 defmodule Satellite.Ingestion do
-  alias Satellite.{ Error, Log, Repo, Request }
+  alias Satellite.{Error, Log, Repo, Request}
 
   def create_request(params) do
     Request.changeset(params)

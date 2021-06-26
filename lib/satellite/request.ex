@@ -22,7 +22,29 @@ defmodule Satellite.Request do
 
   def changeset(params) do
     %__MODULE__{headers: %{}}
-    |> cast(params, [:id, :host, :app, :environment, :client, :language, :ip, :commit, :url, :headers, :status_code ])
-    |> validate_required([:id, :host, :app, :environment, :client, :language, :ip, :url, :status_code])
+    |> cast(params, [
+      :id,
+      :host,
+      :app,
+      :environment,
+      :client,
+      :language,
+      :ip,
+      :commit,
+      :url,
+      :headers,
+      :status_code
+    ])
+    |> validate_required([
+      :id,
+      :host,
+      :app,
+      :environment,
+      :client,
+      :language,
+      :ip,
+      :url,
+      :status_code
+    ])
   end
 end

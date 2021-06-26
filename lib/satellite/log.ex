@@ -24,8 +24,32 @@ defmodule Satellite.Log do
 
   def changeset(params) do
     %__MODULE__{}
-    |> cast(params, [:request_id, :type, :host, :app, :environment, :client, :language, :ip, :commit, :message, :data ])
-    |> validate_required([:request_id, :type, :host, :app, :environment, :client, :language, :ip, :message])
-    |> validate_inclusion(:type, @log_types, message: "is invalid. Allowed values are #{Enum.join(@log_types, ", ")}")
+    |> cast(params, [
+      :request_id,
+      :type,
+      :host,
+      :app,
+      :environment,
+      :client,
+      :language,
+      :ip,
+      :commit,
+      :message,
+      :data
+    ])
+    |> validate_required([
+      :request_id,
+      :type,
+      :host,
+      :app,
+      :environment,
+      :client,
+      :language,
+      :ip,
+      :message
+    ])
+    |> validate_inclusion(:type, @log_types,
+      message: "is invalid. Allowed values are #{Enum.join(@log_types, ", ")}"
+    )
   end
 end
