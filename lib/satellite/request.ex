@@ -19,4 +19,10 @@ defmodule Satellite.Request do
 
     timestamps(inserted_at: :timestamp)
   end
+
+  def changeset(params) do
+    %__MODULE__{headers: %{}}
+    |> cast(params, [:id, :host, :app, :environment, :client, :language, :ip, :commit, :url, :headers, :status_code ])
+    |> validate_required([:id, :host, :app, :environment, :client, :language, :ip, :url, :status_code])
+  end
 end
