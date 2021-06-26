@@ -15,7 +15,7 @@ defmodule Satellite.Log do
     field :ip, :string
     field :commit, :string
     field :message, :string
-    field :data, :string
+    field :data, Satellite.Types.JSON
 
     timestamps(inserted_at: :timestamp)
   end
