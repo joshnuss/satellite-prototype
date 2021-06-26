@@ -25,6 +25,7 @@ defmodule SatelliteWeb.Router do
     post "/requests", RequestController, :create
     post "/logs", LogController, :create
     post "/errors", ErrorController, :create
+    post "/metrics", MetricController, :create
   end
 
   # Enables LiveDashboard only for development
