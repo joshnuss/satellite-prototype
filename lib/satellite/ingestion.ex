@@ -1,5 +1,5 @@
 defmodule Satellite.Ingestion do
-  alias Satellite.{Error, Log, Repo, Request}
+  alias Satellite.{Error, Log, Metric, Repo, Request}
 
   def create_request(params) do
     Request.changeset(params)
@@ -13,6 +13,11 @@ defmodule Satellite.Ingestion do
 
   def create_error(params) do
     Error.changeset(params)
+    |> Repo.insert()
+  end
+
+  def create_metric(params) do
+    Metric.changeset(params)
     |> Repo.insert()
   end
 end
