@@ -2,9 +2,9 @@ use Mix.Config
 
 # Configure your database
 config :satellite, Satellite.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "satellite_dev",
+  username: "default",
+  password: "",
+  database: "hosting",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
